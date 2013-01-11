@@ -1,6 +1,6 @@
-# csv-folder-to-xlsx
+# CSV Folder to OOXML Workbook
 
-## Motivation & Goals
+## Motivation
 
 It's far too often that I have a folder full of CSVs that I want to treat as a single workbook in Excel or LibreOffice. Despite how amazingly useful it would be to import multiple CSVs to load a single workbook, the only action available in both programs was loading one CSV at a time into a wizard and manually renaming each sheet to something that made more sense than "Sheet 1" when the CSVs already had descriptive filenames. It was a tedious process.
 
