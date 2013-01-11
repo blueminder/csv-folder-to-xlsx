@@ -1,20 +1,27 @@
 #!/usr/bin/env ruby
 #
-# CSV Folder to ODS Workbook
+# CSV Folder to OOXML Workbook
 # Written by Enrique Santos (me@enriquesantos.net)
 #
 
-require 'odf/spreadsheet'
+require 'rubygems'
+require 'bundler/setup'
+require 'axlsx'
+
+p = Axlsx::Package.new
+p.use_shared_strings = true
 
 dir = ARGV[0]
-output = ARGV[1]
+out_file = ARGV[1]
 
-ODF::Spreadsheet.file(output) do
   Dir.glob(dir + '/*.csv') do |csvf|
-    puts csvf
-    table csvf do
-      
-    end
-  end  
-end
+    table_name = csvf.split(/\/|[.]/)[-2]
 
+     p.workbook do |wb|
+       wb.add_worksheet(:name => table_name) do |ws|
+           # ws.add_row # array csv by row
+       end
+     end
+  end
+
+p.serialize out_file

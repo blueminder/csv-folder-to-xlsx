@@ -1,1 +1,2 @@
-gem "rods", :git => "https://github.com/empjustine/rods.git"
+source  "http://rubygems.org"
+gem "axlsx"
