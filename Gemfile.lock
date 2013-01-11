@@ -1,0 +1,14 @@
+GIT
+  remote: https://github.com/empjustine/rods.git
+  revision: 81fe3adc3e07bba4a4589a8f09319d48f0e9738e
+  specs:
+    rods (0.9.1)
+
+GEM
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rods!
